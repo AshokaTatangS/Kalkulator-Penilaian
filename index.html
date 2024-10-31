@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penilaian Mahasiswa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Penilaian Mahasiswa</h1>
+        <div class="input-section">
+            <label for="tugas">Nilai Tugas (30%):</label>
+            <input type="number" id="tugas" min="0" max="100" onblur="validateInput(this)">
+            <span class="error-message" id="error-tugas"></span>
+
+            <label for="uts">Nilai UTS (30%):</label>
+            <input type="number" id="uts" min="0" max="100" onblur="validateInput(this)">
+            <span class="error-message" id="error-uts"></span>
+
+            <label for="uas">Nilai UAS (40%):</label>
+            <input type="number" id="uas" min="0" max="100" onblur="validateInput(this)">
+            <span class="error-message" id="error-uas"></span>
+
+            <button onclick="hitungNilai()">Hitung Nilai</button>
+        </div>
+        <div class="result-section" id="resultSection">
+            <p id="contribution"></p>
+            <p id="average"></p>
+            <p id="grade"></p>
+            <p id="status"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
